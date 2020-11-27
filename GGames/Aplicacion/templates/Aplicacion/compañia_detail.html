@@ -1,18 +1,34 @@
 {% extends "base_generic.html" %}
 
 {% block content%}
+
 <section>
-    <article>
+    <article class="col-xs-12 col-sm-12 col-lg-12 col-xl-12">
         <h1>compañia: {{compañia}}</h1>
+        {% if user.is_authenticated  %}{% if user.is_staff %}
+        <div class="conteiner-fluid">
+            <div class="row">
+                <div class="btn-group col-xs-12 col-sm-4 col-lg-4 col-xl-4">
+                    <a class="btn btn-block funti" href="{% url 'compañia_update' pk=compañia.pk %}" 
+                    style="background-color: #581845c2; margin: 0px; font-size: 16px; font-family: Prisma; color: #ffffff;border-color: black;">
+                    Actualizar</a>
+                    <a class="btn btn-block funti" href="{% url 'compañia_delete' pk=compañia.pk %}" 
+                    style="background-color: #581845c2; margin: 0px; font-size: 16px; font-family: Prisma; color: #ffffff; border-color: black;">
+                    Eliminar</a>
+                    
+                </div>
+            </div>
+        </div>
+        {% else %}{% endif %}{% else %}{% endif %}
     </article>
     <article>
-        <div style="margin-left:20 px;margin-top: 20px;" >
-        <h4 style="color: aliceblue;">juegos</h4>
+        <div style="margin-left:20 px;margin-top: 20px;" class="col-xs-12 col-sm-12 col-lg-12 col-xl-12">
+        <h4 style="color: aliceblue;">Juegos</h4>
             <dl>
                 {%for juego in compañia.juego_set.all%}
                     <dt><a href="%url 'compañia-datail' juego.pk %">{{juego}}</a>
                         ({{juego.juegoinstance_set.all.count}})</dt>
-                        <dd>{{juego.descirpcion}}</dd>
+                        <dd style="color: #ffffff;">{{juego.descirpcion}}</dd>
                 {%endfor%}
             </dl>
         </div>

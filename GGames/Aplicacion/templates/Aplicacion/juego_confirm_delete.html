@@ -1,15 +1,17 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-<section>
-    <article>
-        <h1>Borrar Juego</h1>
+<section class="container" style="margin-left:20px ;">
+    <article class="row">
+        <div class="col-xs-12 col-sm-4 col-lg-12 col-xl-12">
+            <h1>Borrar Juego</h1>
+            <p style="color: aliceblue;">Estas seguro que quieres eliminar la compañia :{{juego}} </p>
+            <form action="" method="POST">
+                {% csrf_token %}
+                <input type="submit" action="" value="Si, Borrar">
+            </form>
+        </div>
+        
     </article>
-    <p style="color: aliceblue;">Estas seguro que quieres eliminar la compañia :{{juego}} </p>
-
-    <form action="" method="POST">
-        {% csrf_token %}
-        <input type="submit" action="" value="Si, Borrar">
-    </form>
 </section>
 {% endblock %}

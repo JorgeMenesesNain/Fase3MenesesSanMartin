@@ -31,17 +31,34 @@
                 <li class="nav-item"><a href="{% url 'index' %}" class="nav-link">Inicio</a></li>
                 <li class="nav-item"><a href="{% url 'juegos' %}" class="nav-link">Juegos</a></li>
                 <li class="nav-item"><a href="{% url 'tarJetas' %}" class="nav-link">Tarjetas de regalo</a></li>
-                <li class="nav-item"><a href="{% url 'ju' %}" class="nav-link">Lista de Juegos</a></li>
                 
                 {% if user.is_authenticated  %}
                 <li style="background-color: #581845c2;" li class="nav-item" >
                   <a class="nav-link alerta" href="{% url 'logout' %}" id="P"> Cerrar sesión </a>
                 </li>
+                <li class="nav-item">
+                  <a href="{% url 'password_reset' %}" class="nav-link">Reiniciar Password</a>
+                </li>
+                {% if user.is_staff %}
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    Funciones
+                  </a>
+                  <div class="dropdown-menu" style="background-color: #581845c2;">
+                    <a href="{% url 'ju' %}" class="dropdown-item nav-link">Lista de Juegos</a>
+                    <a class="dropdown-item nav-link" href="{% url 'juego_create' %}">Agregar Juego</a>
+                    <a class="dropdown-item nav-link" href="{% url 'compañia' %}">Lista Compañias</a>
+                    <a class="dropdown-item nav-link" href="{% url 'compañia_create' %}">Agregar Compañia</a>
+                    <a class="dropdown-item nav-link" href="{% url 'genero' %}">Lista Generos</a>
+                    <a class="dropdown-item nav-link" href="{% url 'genero_create' %}">Agregar Genero</a>
+                  </div>
+                {% else %}
+                {% endif %}
                 {% else %}
                 <li style="background-color: #581845c2;" li class="nav-item">
                   <a class="nav-link alerta" href="{% url 'login' %}" id="P"> Ingresar </a>
                 </li>
-                <li class="nav-item"><a href="{% url 'password_reset' %}" class="nav-link">Reiniciar Password</a></li>
+                
                 {% endif %}
             </div>
           </nav>

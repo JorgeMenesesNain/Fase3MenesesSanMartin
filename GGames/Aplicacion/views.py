@@ -37,6 +37,10 @@ class CompañiaDelete(DeleteView):
 class CompañiaDetailView(generic.DetailView):
     model = Compañia 
 
+class ComapñiaListView(generic.ListView):
+    model=Compañia
+    paginate=10
+
 #Genero
 class GeneroCreate(CreateView):
     model= Genero
@@ -53,7 +57,9 @@ class GeneroDelete(DeleteView):
 class GeneroDetailView(generic.DetailView):
     model=Genero
 
-
+class GeneroListView(generic.ListView):
+    model=Genero
+    paginate=10
 
 #Juego
 
@@ -67,7 +73,7 @@ class JuegoCreate(CreateView):
 
 class JuegoUpdate(UpdateView):
     model = Juego
-    fields = ['titulo, compañia, descirpcion, genero']
+    fields = ['titulo','compañia','descirpcion','genero']
 
 class JuegoDelete(DeleteView):
     model= Juego

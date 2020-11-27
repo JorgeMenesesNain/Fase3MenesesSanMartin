@@ -2,22 +2,22 @@
 {% block content %}
 <section>
     <article class="col-xs-12 col-sm-12 col-lg-12 col-xl-12">
-        <h1>Lista de Juegos</h1>
+        <h1>Lista de Compañias</h1>
     </article>
     <article class="col-xs-12 col-sm-12 col-lg-12 col-xl-12">
-        {% if juego_list %}
+        {% if compañia_list %}
         <ul>
-            {% for juego in juego_list %}
+            {% for compañia in compañia_list %}
             <div>
                 <li style="color: aliceblue;">
-                    <a href="{{ juego.get_absolute_url }}" >{{juego.titulo}}</a>({{juego.compañia}})
+                    <a href="{{ compañia.get_absolute_url }}" >{{compañia.compañia}}</a>
                 </li>
             </div>
             {% endfor %}
             
         </ul>
         {% else %}
-            <p>No hay Juegos disponible</p>
+            <p>No hay Compañias disponible</p>
         {% endif %}
     </article>
 </section>

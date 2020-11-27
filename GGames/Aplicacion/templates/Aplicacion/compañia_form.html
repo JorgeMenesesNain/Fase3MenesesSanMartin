@@ -1,19 +1,23 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-<section>
-    <article>
-        <h1>Creacion de Compañia</h1>
+<section class="container" style="margin-left: 20px;">
+    <article class="row">
+        <div class="col-xs-12 col-sm-12 col-lg-12 col-xl-12">
+            <h1>Creacion de Compañia</h1>
+        </div>
     </article>
-    <article>
-        <form action ="" method="post">
-            {% csrf_token %}
-            <table style="color: aliceblue;">
-                {{form.as_table}}
-            </table>
-            <input type="submit" value="Enviar">
-
-        </form>
+    <article class="row">
+        <div class="col-xs-12 col-sm-12 col-lg-12 col-xl-12">
+            <form action ="" method="post">
+                {% csrf_token %}
+                <table style="color: aliceblue;">
+                    {{form.as_table}}
+                </table>
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+        
     </article>
 </section>
 {% endblock %}

@@ -2,8 +2,23 @@
 
 {% block content%}
 <section>
-    <article>
+    <article class="col-xs-12 col-sm-12 col-lg-12 col-xl-12">
         <h1>Genero: {{genero}}</h1>
+        {% if user.is_authenticated  %}{% if user.is_staff %}
+        <div class="conteiner-fluid">
+            <div class="row">
+                <div class="btn-group col-xs-12 col-sm-12 col-lg-12 col-xl-12">
+                    <a class="btn btn-block" href="{% url 'genero_update' pk=genero.pk %}" 
+                    style="background-color: #581845c2; margin: 0px;  font-family: Prisma; color: #ffffff;border-color: black;">
+                    Actualizar</a>
+                    <a class="btn btn-block" href="{% url 'genero_delete' pk=genero.pk %}" 
+                    style="background-color: #581845c2; margin: 0px;  font-family: Prisma; color: #ffffff; border-color: black;">
+                    Eliminar</a>
+                    
+                </div>
+            </div>
+        </div>
+        {% else %}{% endif %}{% else %}{% endif %}
     </article>
 </section>
 {%endblock%}

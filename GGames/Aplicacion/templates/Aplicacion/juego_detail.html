@@ -1,10 +1,29 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-<h1>Titulo: {{ juego.titulo }}</h1>
-<div>
-    <p style="color: aliceblue;"><strong style="color: aliceblue;">Compañia:</strong> <a href="">{{ juego.compañia }}</a></p>
-    <p style="color: aliceblue;"><strong style="color: aliceblue;">Descripcion:</strong> {{ juego.descirpcion }}</p>
-    <p style="color: aliceblue;"><strong style="color: aliceblue;">Genero:</strong> {% for genero in juego.genero.all %} {{ genero }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>  
-</div>
+<section>
+    <article class="col-xs-12 col-sm-12 col-lg-12 col-xl-12">
+        <h1>Titulo: {{ juego.titulo }}</h1>
+        <div>
+            <p style="color: aliceblue;"><strong style="color: aliceblue;">Compañia:</strong> <a href="">{{ juego.compañia }}</a></p>
+            <p style="color: aliceblue;"><strong style="color: aliceblue;">Descripcion:</strong> {{ juego.descirpcion }}</p>
+            <p style="color: aliceblue;"><strong style="color: aliceblue;">Genero:</strong> {% for genero in juego.genero.all %} {{ genero }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>  
+        </div>
+        {% if user.is_authenticated  %}{% if user.is_staff %}
+        <div class="conteiner-fluid">
+            <div class="row">
+                <div class="btn-group col-xs-12 col-sm-4 col-lg-4 col-xl-4">
+                    <a class="btn btn-block" href="{% url 'juego_update' pk=juego.pk %}" 
+                    style="background-color: #581845c2; margin: 0px;  font-family: Prisma; color: #ffffff;border-color: black;">
+                    Actualizar</a>
+                    <a class="btn btn-block" href="{% url 'juego_delete' pk=juego.pk %}" 
+                    style="background-color: #581845c2; margin: 0px;  font-family: Prisma; color: #ffffff; border-color: black;">
+                    Eliminar</a>
+                    
+                </div>
+            </div>
+        </div>
+        {% else %}{% endif %}{% else %}{% endif %}
+    </article>
+</section>
 {% endblock %}
