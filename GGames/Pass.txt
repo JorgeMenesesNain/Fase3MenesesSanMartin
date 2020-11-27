@@ -2,3 +2,8 @@ admin
 JorgeKevin
 pass
 ggamespass
+
+user
+Kevin
+pass
+ggamespass
