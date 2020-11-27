@@ -53,6 +53,15 @@
                     <a class="dropdown-item nav-link" href="{% url 'genero_create' %}">Agregar Genero</a>
                   </div>
                 {% else %}
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    Funciones
+                  </a>
+                  <div class="dropdown-menu" style="background-color: #581845c2;">
+                    <a href="{% url 'ju' %}" class="dropdown-item nav-link">Lista de Juegos</a>
+                    <a class="dropdown-item nav-link" href="{% url 'compañia' %}">Lista Compañias</a>
+                    <a class="dropdown-item nav-link" href="{% url 'genero' %}">Lista Generos</a>
+                  </div>
                 {% endif %}
                 {% else %}
                 <li style="background-color: #581845c2;" li class="nav-item">
