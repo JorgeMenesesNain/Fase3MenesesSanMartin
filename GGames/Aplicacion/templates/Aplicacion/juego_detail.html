@@ -1,0 +1,10 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>Titulo: {{ juego.titulo }}</h1>
+<div>
+    <p style="color: aliceblue;"><strong style="color: aliceblue;">Compañia:</strong> <a href="">{{ juego.compañia }}</a></p>
+    <p style="color: aliceblue;"><strong style="color: aliceblue;">Descripcion:</strong> {{ juego.descirpcion }}</p>
+    <p style="color: aliceblue;"><strong style="color: aliceblue;">Genero:</strong> {% for genero in juego.genero.all %} {{ genero }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>  
+</div>
+{% endblock %}

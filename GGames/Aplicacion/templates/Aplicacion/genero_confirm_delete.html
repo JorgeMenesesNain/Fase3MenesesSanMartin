@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<section>
+    <article>
+        <h1>Borrar Genero</h1>
+    </article>
+    <p style="color: aliceblue;">Estas seguro que quieres eliminar la compañia :{{genero}} </p>
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        <input type="submit" action="" value="Si, Borrar">
+    </form>
+</section>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "base_generic.html" %}
+
+{% block content%}
+<section>
+    <article>
+        <h1>compañia: {{compañia}}</h1>
+    </article>
+    <article>
+        <div style="margin-left:20 px;margin-top: 20px;" >
+        <h4 style="color: aliceblue;">juegos</h4>
+            <dl>
+                {%for juego in compañia.juego_set.all%}
+                    <dt><a href="%url 'compañia-datail' juego.pk %">{{juego}}</a>
+                        ({{juego.juegoinstance_set.all.count}})</dt>
+                        <dd>{{juego.descirpcion}}</dd>
+                {%endfor%}
+            </dl>
+        </div>
+    </article>
+</section>
+{%endblock%}

@@ -1,0 +1,24 @@
+{% extends "base_generic.html" %}
+{% block content %}
+<section>
+    <article>
+        <h1>Lista de Juegos</h1>
+    </article>
+    <article>
+        {% if juego_list %}
+        <ul>
+            {% for juego in juego_list %}
+            <div>
+                <li style="color: aliceblue;">
+                    <a href="{{ juego.get_absolute_url }}" >{{juego.titulo}}</a>({{juego.compañia}})
+                </li>
+            </div>
+            {% endfor %}
+            
+        </ul>
+        {% else %}
+            <p>No hay Juegos disponible</p>
+        {% endif %}
+    </article>
+</section>
+{% endblock %}

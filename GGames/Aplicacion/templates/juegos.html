@@ -1,0 +1,80 @@
+{% extends "base_generic.html" %}
+{% load static %}
+{% block content %}
+<section class="container">
+  <!--1°ra Linea-->
+  <div >   
+    <h1 id="titulo">Juegos</h1>
+    <div class="row">       
+      <div class="col-md-10 col-sm-12 col-xs-4 col-lg-4 col-xl-4">        
+        <div class="card">
+          <img class="card-img-top" src="{% static 'images/cyber500.jpg' %}" alt="Cyberpunk 2077">            
+          <div class="card-body">
+            <h4 class="card-title">CyberPunk Steam Key</h4>
+            <p class="card-text">Cyberpunk 2077 es el nuevo videojuego de rol en primera persona con estructura de mundo abierto de CD Projekt RED. Los padres de The Witcher nos presentan para Xbox One, 
+                  PC y PS4 una aventura de corte futurista y ciberpunk en la que encarnaremos a un personaje diseñado a nuestra medida y en la que tendremos que sobrevivir en una peligrosa urbe plagada de corporaciones, 
+                  ciborgs, bandas y las más variadas amenazas tecnológicas. </p>
+            <a href="{% url 'formulario' %}" class="btn btn-primary boton">$35.990</a>
+          </div>
+        </div>          
+      </div>
+      <div class="col-md-10 col-sm-12 col-xs-4 col-lg-4 col-xl-4">        
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Dead By Daylight Steam Key</h4>
+            <p class="card-text">Dead by Daylight ofrece una jugabilidad basada en el terror multijugador asimétrico en la que un usuario encarna a un asesino y los demás deben sobrevivir. El asesino juega en primera persona y tiene grandes habilidades y poderes. Los supervivientes, en cambio, juegan en tercera persona, obteniendo así un mejor campo de visión, 
+            y recibiendo incentivos por colaborar entre sí para intentar escapar de una muerte segura. </p>
+            <a href="{% url 'formulario' %}" class="btn btn-primary boton">$7.590</a>
+          </div>
+          <img class="card-img-bottom" src="{% static 'images/day500.jpg' %}" alt="Dead By Daylight">                        
+        </div>          
+      </div>
+      <div class="col-md-10 col-sm-12 col-xs-4 col-lg-4 col-xl-4">        
+        <div class="card">
+          <img class="card-img-top" src="{% static 'images/fifa500.jpg' %}" alt="Fifa 20"> 
+          <div class="card-body">
+            <h4 class="card-title">Fifa 20 Origins Key</h4>
+            <p class="card-text">FIFA 20 es la nueva edición de la saga de simulación deportiva de EA Sports, y la séptima entrega de la serie en la generación de consolas encabezada por Xbox One y PlayStation 4, así como por Nintendo Switch. Es la entrega más completa, ambiciosa y variada de FIFA en la última década, incluyendo modos rompedores como VOLTA Football. </p>
+            <a href="{% url 'formulario' %}" class="btn btn-primary boton">$6.990</a>
+          </div>                      
+        </div>          
+      </div>
+    </div>
+  <!--2°da Linea-->
+    <div class="container">   
+      <div class="row">       
+        <div class="col-md-10 col-sm-12 col-xs-12 col-lg-4 col-xl-4">        
+          <div class="card">
+            <img class="card-img-top" src="{% static 'images/wich500.jpg' %}" alt="The Witcher">            
+            <div class="card-body">
+              <h4 class="card-title">The Witcher Steam Key</h4>
+              <p class="card-text">The Witcher 3 es la tercera entrega de la saga The Witcher desarrollada por CD Projekt para PS4, Xbox One y Pc. Se trata de un videojuego que mezcla elementos de aventura, acción y rol en un mundo abierto épico basado en la fantasía. El jugador controlará una vez más a Geralt de Rivia, el afamado cazador de monstruos, (también conocido como el Lobo Blanco) y se enfrentará a un diversificadísimo bestiario y a unos peligros de unas dimensiones nunca vistas hasta el momento en la serie, mientras recorre los reinos del Norte. </p>
+              <a href="{% url 'formulario' %}" class="btn btn-primary boton">$15.990</a>
+            </div>
+          </div>          
+        </div>    
+        <div class="col-md-10 col-sm-12 col-xs-4 col-lg-4 col-xl-4">        
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Human Fall Flat Steam Key</h4>
+              <p class="card-text">Human: Fall Flat se trata de un juego de puzles en tercera persona basado en el uso de la física y en el que el desarrollo no lineal será esencial para desarrollar su aspecto de elecciones esenciales para el jugador. El título nos pone en el papel de Bob, quien debe moverse por una serie de escenarios oníricos buscando una salida, mientras que, para complicar más la jugabilidad, el jugador tendrá que controlar cada extremidad de forma independiente.</p>
+              <a href="{% url 'formulario' %}" class="btn btn-primary boton">$6.500</a>
+            </div>
+          <img class="card-img-bottom" src="{% static 'images/human500.jpg' %}" alt="Human Fall Flat">                        
+          </div>          
+        </div>
+        <div class="col-md-10 col-sm-12 col-xs-4 col-lg-4 col-xl-4">        
+          <div class="card">
+            <img class="card-img-bottom" src="{% static 'images/mine500.jpg' %}" alt="Minecraft"> 
+            <div class="card-body">
+              <h4 class="card-title">Minecraft Java Edition</h4>
+              <p class="card-text">Minecraft es un juego de mundo abierto, por lo que no posee un objetivo específico, permitiéndole al jugador una gran libertad en cuanto a la elección de su forma de jugar. A pesar de ello, el juego posee un sistema de logros. El modo de juego predeterminado es en primera persona, aunque los jugadores tienen la posibilidad de cambiarlo a tercera persona.</p>
+              <a href="{% url 'formulario' %}" class="btn btn-primary boton">$10.000</a>
+            </div>                       
+          </div>          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

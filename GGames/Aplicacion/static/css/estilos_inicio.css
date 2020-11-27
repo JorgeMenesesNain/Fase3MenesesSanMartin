@@ -1,0 +1,196 @@
+@font-face{
+    font-family: "Prisma";
+    src: url(../Fuentes/Prisma.ttf);
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    background: #900C3F;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+#menu{
+    background-color: #581845;
+}
+#menu a{
+    font-family: "Prisma";
+    display: inline-block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+#menu a:hover{
+    background-color: #421735;
+}
+#menu img{
+    width: 70px;
+}
+#CajaCarousel{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 1400px;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 50px;
+  width: 50px;
+}
+.carousel-control-next-icon {
+    background-image: url("../images/Flecha_Der.gif");
+}
+.carousel-control-prev-icon {
+    background-image: url("../images/Flecha_izq.gif");
+}
+
+@media screen and (max-width:768px){
+    #CajaCarousel{
+        width: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .carousel-control-next-icon{
+        background-image: none;
+    }
+    .carousel-control-prev-icon{
+        background-image: none;
+    }
+}
+#metodo_pag{
+    width: 50%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+footer {
+    background-color:#1A1A1A;
+    height: 50%;
+    color: #ffffff;
+    padding: 15px;
+    align-self: flex-end;
+    width: 100%;    
+}
+.main1 { 
+    display:flex;
+    margin:0 auto;
+}
+#pie img {
+    width: 50px;
+}
+#metodo{
+    width: 350px;
+}
+#galeria .col-lg-4{
+    margin: 0 !important;
+    padding:25px;
+}
+#galeria img{
+    width: 100%;
+    height: 100%;
+}
+#galeria img:hover{
+    border: 5px solid #f7f7f7;
+}
+#galeria h1{
+    font-family: Prisma;
+    color: #ffffff;
+}
+#galeria p{
+    font-family: Prisma;
+    color: #ffffff;   
+}
+#galeria h1 img{
+    width: 50px;
+    height: 50px;
+}
+
+.panel {
+    display: none;
+  }
+/* Juegos*/
+.boton{
+    background-color: black;
+    border-color: yellow;
+    color: #ffffff;
+}
+#titulo{
+    font-family: "Prisma";
+    color: #ffffff;
+}
+.card{
+    margin-top: 20px;
+    background-color: #581845;
+    
+}
+.card-text {
+    color: #ffffff;
+}
+.card-title{
+    color: #ffffff;
+}
+#con{
+    margin-bottom: 10px;
+}
+/*Formularios*/
+input {
+    float: left;
+    width: 200px;
+    margin-bottom: 10px;
+}
+  
+label {
+    font-family: Prisma;
+    color: #ffffff;
+    clear: both;
+    float: left;
+    width: 180px;
+}
+  
+button {
+    clear: both;
+    float: left;
+    width: 70px;
+}
+  
+.error-control {
+    border: 1px solid rgb(255, 255, 0);
+}
+  
+label.error {
+    color: rgb(200, 255, 0);
+    width: 300px;
+    font-size: 0.8em;
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
+#forma{
+    width: auto;
+}
+#osito{
+    position:relative;
+    margin-top: 10px;
+    margin-bottom: 70px;
+    margin-left: 15px;
+}
+#osito img{
+    width: 150px;
+    height: 100px;
+}
+
+#proble { 
+    margin-top: 120px;
+    margin-bottom: 10px;
+    margin-left: -150px;
+    color:#ffffff;    
+}
+
+#proble p{
+    display: none;
+}
+
+#prob{
+    width: 100px;
+}

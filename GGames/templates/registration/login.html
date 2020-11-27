@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<form method="post" class="formulario rounded px-5">
+    <div class="text-center mb-4">
+        <img class="mb-4"src="{% static 'images/logo.png' %}" alt="" width="90" height="90">
+        <h1 class="titulo mb-3 font-weight-bold">GGames</h1>
+        <p class="text-light">Inicie sesion para poder acceder a todo nuestro contenido</p>
+    </div>
+    {% csrf_token %}
+    <div class="formulario-label">
+        {{ form.username }}
+        <label for="usuario">Ingrese Usuario</label>
+        
+        
+    </div>
+    <div class="formulario-label">
+        {{ form.password }}
+        <label for="pass">Ingrese Password</label>
+        
+    </div>
+    <div class="mb-3">
+        <label class="text-light">Primera vez en GGames?
+            <a href="">Registrate</a>
+        </label>
+    </div>
+    <button type="submit" class="btn btn-danger btn-block">Iniciar Sesion</button>
+    <p class="mt-5 mb-3 text-muted text-center">&copy; GGames-2020</p>
+</form>
+{% endblock %}

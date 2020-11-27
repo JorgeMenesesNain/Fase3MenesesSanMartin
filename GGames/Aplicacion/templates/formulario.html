@@ -1,0 +1,38 @@
+{% extends "base_generic.html" %}
+{% load static %}
+{% block content %}
+    <body>
+        <section id="Forma" class="container-fluid">
+            <article>
+                <div class="row">
+                    <div  class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <form id="mi-formulario" action="index.html" >
+                            
+                            <label>Nombres: </label>
+                            <input type="text" name="nombre" minlength="2" required>
+
+                            <label>Apellidos: </label>
+                            <input type="text" name="apellido" minlength="2" required>
+                            
+                            <label>Correo Electrónico: </label>
+                            <input type="text" name="email" required placeholder="nombre@dominio.cl">
+                        
+                            <label>Telefono: </label>
+                            <input type="text" name="fono" minlength="9" required>
+                        
+                            <label>Fecha Nacimiento: </label>
+                            <input type="date" name="fecha" min="1900-01-01" required>
+
+                            <button id="btn1" >Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <div id="osito"><img src="{% static 'images/prob.png' %}"></img></div> 
+
+        <div id="proble"><button id="prob">Problemas!?</button>
+            <p>Contactanos a este número: +569 5119 8112</p>
+        </div>
+    </body>
+{% endblock %}

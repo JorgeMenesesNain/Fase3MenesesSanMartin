@@ -1,0 +1,120 @@
+@font-face{
+    font-family: "Prisma";
+    src: url(../Fuentes/Prisma.ttf);
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    background: #900C3F;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+
+/*Menu navbar*/
+#menu{
+    background-color: #581845;
+}
+#menu a{
+    font-family: "Prisma";
+    display: inline-block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+#menu a:hover{
+    background-color: #421735;
+}
+#menu img{
+    width: 70px;
+}
+#metodo_pag{
+    width: 50%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*Pie da Pagina*/
+footer {
+    background-color:#1A1A1A;
+    height: 50%;
+    color: white;
+    padding: 15px;
+    align-self: flex-end;
+    width: 100%;    
+}
+.main1 { 
+    display:flex;
+    margin:0 auto;
+}
+#pie img {
+    width: 50px;
+}
+#metodo{
+    width: 350px;
+}
+
+/**/
+
+input {
+    float: left;
+    width: 200px;
+    margin-bottom: 10px;
+}
+  
+label {
+    font-family: Prisma;
+    color: #ffffff;
+    clear: both;
+    float: left;
+    width: 180px;
+}
+  
+button {
+    clear: both;
+    float: left;
+    width: 70px;
+}
+  
+.error-control {
+    border: 1px solid rgb(255, 255, 0);
+}
+  
+label.error {
+    color: rgb(200, 255, 0);
+    width: 300px;
+    font-size: 0.8em;
+    margin-top: -5px;
+    margin-bottom: 10px;
+}
+#forma{
+    width: auto;
+}
+#osito{
+    position:relative;
+    margin-top: 10px;
+    margin-bottom: 70px;
+    margin-left: 15px;
+}
+#osito img{
+    width: 150px;
+    height: 100px;
+}
+
+#proble { 
+    margin-top: 120px;
+    margin-bottom: 10px;
+    margin-left: -150px;
+    color:#ffffff;    
+}
+
+#proble p{
+    display: none;
+}
+
+#prob{
+    width: 100px;
+}

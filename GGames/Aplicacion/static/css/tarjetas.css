@@ -1,0 +1,71 @@
+@font-face{
+    font-family: "Prisma";
+    src: url(../Fuentes/Prisma.ttf);
+}
+body{
+    background: #900C3F;
+}
+/*menu*/
+#menu{
+    background-color: #581845;
+}
+#menu a{
+    font-family: "Prisma";
+    display: inline-block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+#menu a:hover{
+    background-color: #421735;
+}
+#menu img{
+    width: 70px;
+}
+/*fin Menu*/
+.boton{
+    background-color: black;
+    border-color: yellow;
+    color: #ffffff;
+}
+h1{
+    font-family: "Prisma";
+    color: #ffffff;
+}
+
+.card{
+    margin-top: 20px;
+    background-color: #581845;
+}
+.card-text {
+    color: #ffffff;
+}
+
+.card-title{
+    color: #ffffff;
+}
+#metodo_pag{
+    width: 50%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+footer {
+    background-color:#1A1A1A;
+    height: 50%;
+    color: white;
+    padding: 15px;
+    align-self: flex-end;
+    width: 100%;
+    margin-top: 10px;
+}
+.main1 { 
+    display:flex;
+    margin:0 auto;
+}
+#pie img {
+    width: 50px;
+}
+#metodo{
+    width: 350px;
+}

@@ -1,0 +1,22 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+<section>
+  <div class="container">
+      <div>
+        <h1 id="titulo">GGames</h1>
+        <div class="row">
+          <div class="col-md-12 col-sm-12 col-xs-4 col-lg-12 col-xl-12">
+            <p style="color: aliceblue;">Bienbenido a <em>GGames</em>, Django website </p>
+            {% if user.is_authenticated %}
+              <h3 style="color: aliceblue;">Hola! {{ user.username }}</h3>
+            {% else %}
+              <p style="color: aliceblue;">Tu no estas Registrado</p>
+              <a href="{% url 'login' %}">Login</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+  </div>
+</section>
+{% endblock %}

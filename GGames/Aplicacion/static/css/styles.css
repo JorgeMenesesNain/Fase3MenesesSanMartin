@@ -1,0 +1,31 @@
+@font-face{
+    font-family: "Prisma";
+    src: url(../Fuentes/Prisma.ttf);
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    background: #900C3F;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+#menu{
+    background-color: #581845;
+}
+#menu a{
+    font-family: "Prisma";
+    display: inline-block;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+#menu a:hover{
+    background-color: #421735;
+}
+#menu img{
+    width: 70px;
+}
