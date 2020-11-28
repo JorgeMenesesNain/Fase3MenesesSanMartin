@@ -19,6 +19,10 @@ from django.urls import include
 from django.conf import settings
 from django.conf.urls.static import static
 from django.views.generic.base import TemplateView
+#importamos la app de django-rest 
+from rest_framework import routers
+from quick import views
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,4 +31,17 @@ urlpatterns = [
     path('accounts/',include('django.contrib.auth.urls')),
     path('',TemplateView.as_view(template_name='home.html'),name='home'),
 ]
+
+
+
+router = routers.DefaultRouter()
+router.register(r'users', views.UserViewSet)
+router.register(r'groups', views.GroupViewSet)
+
+
+urlpatterns = [
+    path('', include(router.urls)),
+    path('api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+]
+
 urlpatterns+= static(settings.STATIC_URL, document_root= settings.STATIC_ROOT)
