@@ -5,7 +5,7 @@
     <article class="col-xs-12 col-sm-12 col-lg-12 col-xl-12">
         <h1>Titulo: {{ juego.titulo }}</h1>
         <div>
-            <p style="color: aliceblue;"><strong style="color: aliceblue;">Compañia:</strong> <a href="">{{ juego.compañia }}</a></p>
+            <p style="color: aliceblue;"><strong style="color: aliceblue;">Compañia:</strong> <a href="{% url 'compañia-detail' pk=juego.compañia.pk%}">{{ juego.compañia }}</a></p>
             <p style="color: aliceblue;"><strong style="color: aliceblue;">Descripcion:</strong> {{ juego.descirpcion }}</p>
             <p style="color: aliceblue;"><strong style="color: aliceblue;">Genero:</strong> {% for genero in juego.genero.all %} {{ genero }}{% if not forloop.last %}, {% endif %}{% endfor %}</p>  
         </div>

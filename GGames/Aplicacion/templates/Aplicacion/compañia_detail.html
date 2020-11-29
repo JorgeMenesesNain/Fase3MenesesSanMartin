@@ -26,8 +26,8 @@
         <h4 style="color: aliceblue;">Juegos</h4>
             <dl>
                 {%for juego in compañia.juego_set.all%}
-                    <dt><a href="%url 'compañia-datail' juego.pk %">{{juego}}</a>
-                        ({{juego.juegoinstance_set.all.count}})</dt>
+                    <dt><a href="{% url 'juego-detail' pk=juego.pk %}">{{juego}}</a>
+                        {{juego.juegoinstance_set.all.count}}</dt>
                         <dd style="color: #ffffff;">{{juego.descirpcion}}</dd>
                 {%endfor%}
             </dl>
